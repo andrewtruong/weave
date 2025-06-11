@@ -24,7 +24,7 @@ def lint(session):
     dry_run = session.posargs and "dry-run" in session.posargs
     if dry_run:
         session.run(
-            "pre-commit",
+            "changed",
             "run",
             "--hook-stage",
             "pre-push",
